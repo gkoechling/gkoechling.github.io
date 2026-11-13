@@ -34,6 +34,9 @@ a:hover{color:#0f2440}
 .side .links{list-style:none;padding:0;margin:0 0 22px;font-size:15.5px}
 .side .links li{margin:5px 0}
 .side .links .cv a{font-weight:700}
+.side .links a{display:inline-flex;align-items:center;gap:9px}
+.side .links .ic{width:16px;height:16px;flex:0 0 16px;fill:none;stroke:#7b8794;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.side .links a:hover .ic{stroke:var(--acc)}
 .toc{border-top:1px solid var(--line);padding-top:14px;display:flex;flex-direction:column;gap:5px;font-size:15px}
 .toc a{color:var(--soft);text-decoration:none;padding-left:10px;border-left:2px solid transparent}
 .toc a:hover{color:var(--acc)}
@@ -90,14 +93,7 @@ footer{border-top:1px solid var(--line);padding-top:20px;margin-top:10px}
   <a href="/" aria-label="Home"><img class="photo" src="/img/gerrit_koechling_square.jpg" alt="Gerrit Köchling presenting a research paper" width="640" height="640"></a>
   <h1 class="name">Gerrit Köchling</h1>
   <p class="role">Assistant Professor of Finance<br>Ilmenau University of Technology</p>
-  <ul class="links">
-      <li><a href="https://www.tu-ilmenau.de/en/university/departments/department-of-economic-sciences-and-media/profile/institutes-and-groups/finance-group">University website</a></li>
-      <li><a href="https://scholar.google.de/citations?user=a5JoTuUAAAAJ&amp;hl=de&amp;oi=ao">Google Scholar</a></li>
-      <li><a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=2900815">SSRN</a></li>
-      <li><a href="https://www.linkedin.com/in/gerrit-koechling/">LinkedIn</a></li>
-      <li><a href="mailto:gerrit.koechling@tu-ilmenau.de">gerrit.koechling@tu-ilmenau.de</a></li>
-      <li class="cv"><a href="/cv.pdf">Curriculum Vitae</a></li>
-    </ul>
+  <ul class="links"><li><a href="https://www.tu-ilmenau.de/en/university/departments/department-of-economic-sciences-and-media/profile/institutes-and-groups/finance-group"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9l9-5 9 5"/><path d="M5 10v8M9.5 10v8M14.5 10v8M19 10v8"/><path d="M3 20h18"/></svg><span>University website</span></a></li><li><a href="https://scholar.google.de/citations?user=a5JoTuUAAAAJ&amp;hl=de&amp;oi=ao"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 9.5l10-5 10 5-10 5z"/><path d="M6 12v4.2c0 1.4 2.7 2.8 6 2.8s6-1.4 6-2.8V12"/></svg><span>Google Scholar</span></a></li><li><a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=2900815"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4"/><path d="M9.5 12h6M9.5 15.5h6"/></svg><span>SSRN</span></a></li><li><a href="https://orcid.org/0000-0001-6266-6332"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9 10.5V16M9 8v.01"/><path d="M12 10h1.6a3 3 0 0 1 0 6H12z"/></svg><span>ORCID</span></a></li><li><a href="https://www.linkedin.com/in/gerrit-koechling/"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10.5V16M8 7.8v.01M11.5 16v-5.5M11.5 13a2.2 2.2 0 0 1 4.4 0V16"/></svg><span>LinkedIn</span></a></li><li><a href="mailto:gerrit.koechling@tu-ilmenau.de"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3.8 7l8.2 6 8.2-6"/></svg><span>gerrit.koechling@tu-ilmenau.de</span></a></li><li class="cv"><a href="/cv.pdf"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4"/><path d="M12.5 10.5v6M10 14.2l2.5 2.5 2.5-2.5"/></svg><span>Curriculum Vitae</span></a></li></ul>
   <nav class="toc" aria-label="Sections">
     <a href="#about">About</a><a href="#working-papers">Working papers</a><a href="#publications">Publications</a><a href="#teaching">Teaching</a><a href="#resources">Resources</a>
   </nav>
@@ -157,9 +153,9 @@ footer{border-top:1px solid var(--line);padding-top:20px;margin-top:10px}
   <h3>Courses at Ilmenau University of Technology</h3>
   <ul class="res teach">
   <li><span class="c">Corporate Finance</span><span class="meta">Master · English · summer term · lecture and exercise</span>
-    <span>Risk and return, cash flows, the cost of capital, company valuation, and payout policy, based on Berk and DeMarzo. Hands-on: in a semester-long project, groups value a real company in Excel with real market data, from its cost of capital (WACC) to a full DCF valuation compared with the market price. Plus case studies such as the SpaceX IPO and exercises in Python.</span></li>
+    <span>Risk and return, cash flows, the cost of capital, company valuation, and payout policy, based on Berk and DeMarzo. Exercises in Excel and Python, and case studies such as the SpaceX IPO and a company valuation project.</span></li>
   <li><span class="c">Decentralized Finance</span><span class="meta">Master · English · winter term · lecture and exercise</span>
-    <span>How blockchains, Bitcoin, and Ethereum smart contracts work, and what decentralized finance builds on them: lending protocols, decentralized exchanges such as Uniswap, tokenized real-world assets, and their risks and regulation. Hands-on: students write Solidity smart contracts in Remix, design and deploy their own ERC-20 token on the Ethereum Sepolia testnet, and work with live Uniswap data in Python.</span></li>
+    <span>How blockchains, Bitcoin, and Ethereum smart contracts work, and what decentralized finance builds on them: lending protocols, decentralized exchanges such as Uniswap, tokenized real-world assets, and their risks and regulation. With Solidity in Remix, an ERC-20 token deployment, Python notebooks, and project sprints.</span></li>
   <li><span class="c">AI in Finance</span><span class="meta">Master · English · summer term · new from 2027</span>
     <span>Using AI and machine learning for empirical finance research: from finding research questions and literature, collecting and processing data, causal inference and validity, to machine learning in asset pricing and AI agents in research workflows. Assessed by an empirical team project.</span></li>
   <li><span class="c">Investment Strategies <small>(Kapitalanlagestrategien)</small></span><span class="meta">Bachelor · German · winter term · new from 2027/28</span>
