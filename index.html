@@ -15,7 +15,7 @@
 <link rel="icon" href="/img/icon_192.png" sizes="192x192" type="image/png">
 <link rel="apple-touch-icon" href="/img/icon_180.png">
 <link rel="stylesheet" href="/fonts/fonts.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Gerrit Köchling","url":"https://www.gerritkoechling.com/","jobTitle":"Assistant Professor of Finance","worksFor":{"@type":"CollegeOrUniversity","name":"Ilmenau University of Technology"},"email":"mailto:gerrit.koechling@tu-ilmenau.de","sameAs":["https://scholar.google.de/citations?user=a5JoTuUAAAAJ","https://www.linkedin.com/in/gerrit-koechling/","https://orcid.org/0000-0001-6266-6332","https://www.webofscience.com/wos/author/record/AAD-9535-2020","https://www.tu-ilmenau.de/en/university/departments/department-of-economic-sciences-and-media/profile/institutes-and-groups/finance-group"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Gerrit Köchling","url":"https://www.gerritkoechling.com/","jobTitle":"Assistant Professor of Finance","worksFor":{"@type":"CollegeOrUniversity","name":"Ilmenau University of Technology"},"email":"mailto:gerrit.koechling@tu-ilmenau.de","sameAs":["https://scholar.google.de/citations?user=a5JoTuUAAAAJ","https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=2900815","https://www.linkedin.com/in/gerrit-koechling/","https://orcid.org/0000-0001-6266-6332","https://www.webofscience.com/wos/author/record/AAD-9535-2020","https://www.tu-ilmenau.de/en/university/departments/department-of-economic-sciences-and-media/profile/institutes-and-groups/finance-group"]}</script>
 <style>
 :root{--bg:#f8f8f8;--ink:#2b2b2b;--soft:#555;--green:#274e13;--line:#d9d9d9}
 *{box-sizing:border-box}
@@ -24,12 +24,16 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:Lato,"Helvetica 
 a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
 a:hover{color:var(--green)}
 ::selection{background:#dfe9d8}
-.top{max-width:1180px;margin:0 auto;padding:18px 24px 0;font-size:21px;font-weight:300}
+.top{max-width:1180px;margin:0 auto;padding:18px 24px 0;display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 26px}
 .top a{text-decoration:none}
+.top .name{font-size:21px;margin-right:auto}
+.top nav{display:flex;flex-wrap:wrap;gap:4px 22px;font-size:16px}
+.top nav a{color:var(--soft);border-bottom:1px solid transparent}
+.top nav a:hover{color:var(--green);border-bottom-color:var(--green)}
 main{max-width:1180px;margin:0 auto;padding:22px 24px 10px}
 .hero{display:grid;grid-template-columns:minmax(0,460px) 1fr;gap:36px;align-items:start}
 .hero img{width:100%;height:auto;display:block;border-radius:2px}
-.bio p{margin:6px 0 22px;color:var(--soft)}
+.bio p{margin:0 0 22px;color:var(--soft)}
 .links{list-style:none;margin:0;padding:0 0 0 20px}
 .links li{margin:4px 0}
 .links .cv{font-weight:700;font-style:italic}
@@ -43,7 +47,19 @@ h2 small{font-size:15px;font-weight:400}
 .paper .t{font-size:19px}
 .paper .with{font-size:16px}
 .paper .j{font-weight:700;margin-top:2px}
-.paper .abs{font-size:15.5px;color:var(--soft);margin-top:2px}
+.paper{margin-bottom:18px}
+details.abs{margin-top:3px;font-size:15.5px;color:var(--soft)}
+details.abs summary{cursor:pointer;list-style:none;display:inline-block;font-size:14px;color:var(--green);letter-spacing:.02em}
+details.abs summary::-webkit-details-marker{display:none}
+details.abs summary::before{content:"\25B8\00a0"}
+details.abs[open] summary::before{content:"\25BE\00a0"}
+details.abs summary:hover{text-decoration:underline;text-underline-offset:3px}
+details.abs p{margin:4px 0 6px;max-width:980px}
+.res{list-style:none;padding:0;margin:8px 0 0}
+.res li{margin:0 0 16px}
+.res a{font-size:19px}
+.res span{display:block;font-size:15.5px;color:var(--soft);max-width:980px}
+.res .c{display:block;font-size:19px;color:var(--ink)}
 .more{font-style:italic;font-size:15.5px;margin:26px 0 0}
 .seminar{font-size:19px}
 footer{max-width:1180px;margin:0 auto;padding:0 24px 34px}
@@ -60,7 +76,7 @@ footer{max-width:1180px;margin:0 auto;padding:0 24px 34px}
 </style>
 </head>
 <body>
-<header class="top"><a href="/">Gerrit Köchling</a></header>
+<header class="top"><a class="name" href="/">Gerrit Köchling</a><nav aria-label="Sections"><a href="#research">Research</a><a href="#publications">Publications</a><a href="#teaching">Teaching</a><a href="#resources">Resources</a><a href="/cv.pdf">CV</a></nav></header>
 <main>
 <section class="hero">
   <img src="/img/gerrit_koechling.jpg" alt="Gerrit Köchling presenting a research paper" width="1200" height="900">
@@ -69,9 +85,10 @@ footer{max-width:1180px;margin:0 auto;padding:0 24px 34px}
     <ul class="links">
       <li><a href="https://www.tu-ilmenau.de/en/university/departments/department-of-economic-sciences-and-media/profile/institutes-and-groups/finance-group">University website</a></li>
       <li><a href="https://scholar.google.de/citations?user=a5JoTuUAAAAJ&amp;hl=de&amp;oi=ao">Google Scholar</a></li>
+      <li><a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=2900815">SSRN</a></li>
       <li><a href="https://www.linkedin.com/in/gerrit-koechling/">LinkedIn</a></li>
       <li><a href="mailto:gerrit.koechling@tu-ilmenau.de">gerrit.koechling@tu-ilmenau.de</a></li>
-      <li class="cv"><a href="https://www.dropbox.com/scl/fi/8qmy55s8rw3j6usmnpoke/CV_Koechling_en.pdf?rlkey=gkwqi5sdm8h554f6yamobynx4&amp;st=89nm6ye9&amp;dl=0">Curriculum Vitae</a></li>
+      <li class="cv"><a href="/cv.pdf">Curriculum Vitae</a></li>
     </ul>
   </div>
 </section>
@@ -86,55 +103,75 @@ footer{max-width:1180px;margin:0 auto;padding:0 24px 34px}
 <h2>Online Research Seminar in Finance and Accounting</h2>
 <p class="seminar">I co-organize an online research seminar with leading finance and accounting scholars from around the world. Here is the <a href="https://www.jointfinanceseminar.com/">seminar website</a>.</p>
 
-<h2>Working Paper <small>(selected)</small></h2>
+<h2 id="working-papers">Working Papers <small>(selected)</small></h2>
 
 <div class="paper">
   <div><a class="t" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4643278">Traditional Investment Research and Social Networks</a> <span class="with">(with Travis Dyer and Peter Limbach)</span></div>
-  <div class="abs">We show that investors acquire more public information about firms to which they are more socially proximate. On average, a standard deviation increase in the Social Connectedness Index (Bailey et al., 2018) between a firm’s headquarter county and a searcher county is associated with 30% more EDGAR filing downloads from the searcher county. The effect of social proximity on traditional investment research is distinct from the effect of geographic proximity. We find similar results studying headquarter relocations, investor-level data, and EDGAR downloads from European regions, for which physical distance should be irrelevant. Social proximity matters more during times of high market-wide uncertainty and for firms with weaker information environments. Finally, information gathered by socially proximate investors predicts short-term earnings and stock returns, but also heightened volatility. Collectively, the evidence indicates that social networks mitigate informational frictions and foster information acquisition in financial markets.</div>
+  <details class="abs"><summary>Abstract</summary><p>We show that investors acquire more public information about firms to which they are more socially proximate. On average, a standard deviation increase in the Social Connectedness Index (Bailey et al., 2018) between a firm’s headquarter county and a searcher county is associated with 30% more EDGAR filing downloads from the searcher county. The effect of social proximity on traditional investment research is distinct from the effect of geographic proximity. We find similar results studying headquarter relocations, investor-level data, and EDGAR downloads from European regions, for which physical distance should be irrelevant. Social proximity matters more during times of high market-wide uncertainty and for firms with weaker information environments. Finally, information gathered by socially proximate investors predicts short-term earnings and stock returns, but also heightened volatility. Collectively, the evidence indicates that social networks mitigate informational frictions and foster information acquisition in financial markets.</p></details>
 </div>
 
 <div class="paper">
   <div><a class="t" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5917222">Emissions Restatements after the SEC’s Request for Public Input on Climate-Related Disclosures: Evidence from Carbon Disclosure Project Filings</a> <span class="with">(with Daniel Aobdia, Peter Limbach, and Aaron Yoon)</span></div>
-  <div class="abs">This paper analyzes firms’ restatements of their Scope 1 emission numbers after the Securities and Exchange Commission’s request for public input on climate-related disclosure in March 2021. Using data from the Carbon Disclosure Project, we find a marked increase in the frequency and magnitude of restatements by U.S. public firms, both relative to their previous restatement levels and to those of private firms not subject to SEC oversight. Firms with independently assured emission data, board-level oversight of climate issues, high transition risk, and high institutional ownership restate less upwards but not downwards. Firms with upward revisions in response to the SEC’s initiative increase investments in emission-reduction projects. The results are consistent with widespread weaknesses in firms’ carbon reporting infrastructures and strategic motives to underreport. They have important implications for regulators, investors, and standard setters by highlighting the need for robust carbon reporting, and the critical role of assurance of sustainability disclosures.</div>
+  <details class="abs"><summary>Abstract</summary><p>This paper analyzes firms’ restatements of their Scope 1 emission numbers after the Securities and Exchange Commission’s request for public input on climate-related disclosure in March 2021. Using data from the Carbon Disclosure Project, we find a marked increase in the frequency and magnitude of restatements by U.S. public firms, both relative to their previous restatement levels and to those of private firms not subject to SEC oversight. Firms with independently assured emission data, board-level oversight of climate issues, high transition risk, and high institutional ownership restate less upwards but not downwards. Firms with upward revisions in response to the SEC’s initiative increase investments in emission-reduction projects. The results are consistent with widespread weaknesses in firms’ carbon reporting infrastructures and strategic motives to underreport. They have important implications for regulators, investors, and standard setters by highlighting the need for robust carbon reporting, and the critical role of assurance of sustainability disclosures.</p></details>
 </div>
 
-<p class="more">Find further working paper in my <a href="https://www.dropbox.com/scl/fi/8qmy55s8rw3j6usmnpoke/CV_Koechling_en.pdf?rlkey=gkwqi5sdm8h554f6yamobynx4&amp;st=89nm6ye9&amp;dl=0">CV</a>.</p>
+<p class="more">Find further working papers in my <a href="/cv.pdf">CV</a>.</p>
 
-<h2>Publications <small>(selected)</small></h2>
+<h2 id="publications">Publications <small>(selected)</small></h2>
 
 <div class="paper">
   <div><a class="t" href="https://www.cambridge.org/core/journals/journal-of-financial-and-quantitative-analysis/article/does-speculative-news-hurt-productivity-evidence-from-takeover-rumors/306BB2F47D9F18D31254D6B87166C26B">Does Speculative News Hurt Productivity? Evidence from Takeover Rumors</a> <span class="with">(with Christian Andres, Dmitry Bazhutov, Douglas Cumming, and Peter Limbach)</span></div>
   <div class="j">Journal of Financial and Quantitative Analysis (2025)</div>
-  <div class="abs">We show that productivity at both the firm and employee (i.e., analyst and inventor) level temporarily declines upon announcements of takeover rumors that do not materialize. Such speculative news may hurt productivity because uncertainty and threat of job loss cause anxiety, distraction, and reduced commitment among employees and managers. Consistently, we observe a more pronounced productivity dip for rumored targets and when the likelihood of job loss is higher. Firm performance mirrors these results. We find no indication of reverse causality. The evidence fosters our understanding of potential real effects of speculative financial news and the costs of takeover threats.</div>
+  <details class="abs"><summary>Abstract</summary><p>We show that productivity at both the firm and employee (i.e., analyst and inventor) level temporarily declines upon announcements of takeover rumors that do not materialize. Such speculative news may hurt productivity because uncertainty and threat of job loss cause anxiety, distraction, and reduced commitment among employees and managers. Consistently, we observe a more pronounced productivity dip for rumored targets and when the likelihood of job loss is higher. Firm performance mirrors these results. We find no indication of reverse causality. The evidence fosters our understanding of potential real effects of speculative financial news and the costs of takeover threats.</p></details>
 </div>
 
 <div class="paper">
   <div><a class="t" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4115733">Institutional Investor Distraction and Unethical Business Practices: Evidence from Stakeholder-Related Misconduct</a> <span class="with">(with Daniel Neukirchen and Peter N. Posch)</span></div>
   <div class="j">Journal of Financial Stability (2025)</div>
-  <div class="abs">We exploit exogenous shocks to institutional investors’ portfolios to show that managers engage in significantly more stakeholder-related misconduct when institutional investors are distracted. The relationship is more pronounced (i) for firms where managers are more enticed to commit wrongdoing or have more outside options in the executive labor market, and (ii) for firms with weak internal and external governance. Furthermore, we find that during these periods of institutional distraction, managers are particularly likely to engage in misconduct detrimental to employees. Overall, our evidence suggests that institutional investors are important monitors of management and prevent misconduct detrimental to both shareholders and stakeholders.</div>
+  <details class="abs"><summary>Abstract</summary><p>We exploit exogenous shocks to institutional investors’ portfolios to show that managers engage in significantly more stakeholder-related misconduct when institutional investors are distracted. The relationship is more pronounced (i) for firms where managers are more enticed to commit wrongdoing or have more outside options in the executive labor market, and (ii) for firms with weak internal and external governance. Furthermore, we find that during these periods of institutional distraction, managers are particularly likely to engage in misconduct detrimental to employees. Overall, our evidence suggests that institutional investors are important monitors of management and prevent misconduct detrimental to both shareholders and stakeholders.</p></details>
 </div>
 
 <div class="paper">
   <div><a class="t" href="https://www.sciencedirect.com/science/article/pii/S0378426624000785">How does corporate culture affect IPO price formation?</a> <span class="with">(with Douglas Cumming, Daniel Neukirchen, and Peter N. Posch)</span></div>
   <div class="j">Journal of Banking &amp; Finance (2024)</div>
-  <div class="abs">We examine the relationship between corporate culture and initial public offering (IPO) price formation. Using a sample of 935 US IPOs and data on corporate culture from Li et al. (2021b), we find that IPOs of strong culture firms are associated with more positive price revisions and higher initial returns, i.e., more underpricing. These findings hold using an alternative measure of corporate culture, matched samples, and a large set of control variables. Consistent with key theories, the effects appear to be driven by underwriters deliberately compensating investors for revealing information about their perceptions of the firm's culture during bookbuilding.</div>
+  <details class="abs"><summary>Abstract</summary><p>We examine the relationship between corporate culture and initial public offering (IPO) price formation. Using a sample of 935 US IPOs and data on corporate culture from Li et al. (2021b), we find that IPOs of strong culture firms are associated with more positive price revisions and higher initial returns, i.e., more underpricing. These findings hold using an alternative measure of corporate culture, matched samples, and a large set of control variables. Consistent with key theories, the effects appear to be driven by underwriters deliberately compensating investors for revealing information about their perceptions of the firm's culture during bookbuilding.</p></details>
 </div>
 
 <div class="paper">
   <div><a class="t" href="https://onlinelibrary.wiley.com/doi/full/10.1111/1467-8551.12779">Do Institutional Investors Care About Operational Leanness?</a> <span class="with">(with Daniel Neukirchen and Peter N. Posch)</span></div>
   <div class="j">British Journal of Management (2023)</div>
-  <div class="abs">We investigate the relationship between operational leanness and institutional ownership. Based on a sample of 12,291 firm-year observations of US manufacturing firms from 1998 to 2020, we find leaner firms to attract significantly more institutional investors – both in terms of the fraction of shares held and the number of institutional investors holding shares of the firm. This finding holds in several tests addressing endogeneity concerns. Contrary to studies investigating the relationship between operational leanness and operating performance or credit ratings, our results do not provide consistent evidence that this relationship is also of a concave shape. However, we provide evidence that the relationship is stronger (i) for firms with weak corporate governance and high firm-specific monitoring costs and (ii) for active institutions, suggesting that not only firm performance considerations but also perceived lower agency costs are important mechanisms explaining why institutional investors prefer lean manufacturing firms. Taken together, these findings contribute to our understanding of institutional investors’ preferences in general and across institution types.</div>
+  <details class="abs"><summary>Abstract</summary><p>We investigate the relationship between operational leanness and institutional ownership. Based on a sample of 12,291 firm-year observations of US manufacturing firms from 1998 to 2020, we find leaner firms to attract significantly more institutional investors – both in terms of the fraction of shares held and the number of institutional investors holding shares of the firm. This finding holds in several tests addressing endogeneity concerns. Contrary to studies investigating the relationship between operational leanness and operating performance or credit ratings, our results do not provide consistent evidence that this relationship is also of a concave shape. However, we provide evidence that the relationship is stronger (i) for firms with weak corporate governance and high firm-specific monitoring costs and (ii) for active institutions, suggesting that not only firm performance considerations but also perceived lower agency costs are important mechanisms explaining why institutional investors prefer lean manufacturing firms. Taken together, these findings contribute to our understanding of institutional investors’ preferences in general and across institution types.</p></details>
 </div>
 
-<p class="more">Find further publications in my <a href="https://www.dropbox.com/scl/fi/8qmy55s8rw3j6usmnpoke/CV_Koechling_en.pdf?rlkey=gkwqi5sdm8h554f6yamobynx4&amp;st=89nm6ye9&amp;dl=0">CV</a>.</p>
+<p class="more">Find further publications in my <a href="/cv.pdf">CV</a>.</p>
+
+<hr>
+
+<h1 id="teaching">Teaching</h1>
+<h2>Current courses <small>(Ilmenau University of Technology)</small></h2>
+<ul class="res">
+  <li><span class="c">Decentralized Finance</span><span>Master · English · lecture and exercise · winter term</span></li>
+  <li><span class="c">Corporate Finance</span><span>Master · English · lecture and exercise · summer term</span></li>
+  <li><span class="c">Graduate Research Seminar</span><span>Master · English · seminar</span></li>
+</ul>
+<p class="more">Earlier at TU Dortmund (2017–2024): Financial Modeling, Financial Econometrics, Investment &amp; Finance, Research Topics in Finance, and seminars. Full list in my <a href="/cv.pdf">CV</a>.</p>
+
+<hr>
+
+<h1 id="resources">Resources</h1>
+<ul class="res">
+  <li><a href="https://www.jointfinanceseminar.com/free-datasets/">Free data sources for finance and accounting research</a><span>A searchable list of freely available datasets, sorted by topic: asset pricing, corporate finance and governance, banking and households, innovation, regulation and politics, ESG and climate, culture and news, and macro data. Every link checked; maintained with the Joint Finance Seminar.</span></li>
+  <li><a href="https://www.jointfinanceseminar.com/past-seminars/">Joint Finance Seminar: past talks</a><span>All talks of our online research seminar since 2020, with the journals where the papers were published.</span></li>
+</ul>
 </main>
 
 <footer>
   <hr>
   <nav class="social" aria-label="Profiles">
     <a href="https://www.linkedin.com/in/gerrit-koechling/">LinkedIn</a>
+    <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=2900815">SSRN</a>
     <a href="https://orcid.org/0000-0001-6266-6332">ORCID</a>
-    <a href="https://www.webofscience.com/wos/author/record/AAD-9535-2020">Publons</a>
+    <a href="https://www.webofscience.com/wos/author/record/AAD-9535-2020">Web of Science</a>
   </nav>
   <p class="fine">This website is hosted on GitHub Pages; GitHub logs visitors’ IP addresses for security purposes. No cookies, no analytics.</p>
 </footer>
