@@ -17,72 +17,80 @@
 <link rel="stylesheet" href="/fonts/fonts.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Gerrit Köchling","url":"https://www.gerritkoechling.com/","jobTitle":"Assistant Professor of Finance","worksFor":{"@type":"CollegeOrUniversity","name":"Ilmenau University of Technology"},"email":"mailto:gerrit.koechling@tu-ilmenau.de","sameAs":["https://scholar.google.de/citations?user=a5JoTuUAAAAJ","https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=2900815","https://www.linkedin.com/in/gerrit-koechling/","https://orcid.org/0000-0001-6266-6332","https://www.webofscience.com/wos/author/record/AAD-9535-2020","https://www.tu-ilmenau.de/en/university/departments/department-of-economic-sciences-and-media/profile/institutes-and-groups/finance-group"]}</script>
 <style>
-:root{--bg:#f8f8f8;--ink:#2b2b2b;--soft:#555;--green:#274e13;--line:#d9d9d9}
+:root{--ink:#1f2933;--soft:#52606d;--acc:#1f3a5f;--acc-soft:#e8eef5;--line:#e4e7eb;--bg:#fff}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:Lato,"Helvetica Neue",Arial,sans-serif;font-weight:300;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
-a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
-a:hover{color:var(--green)}
-::selection{background:#dfe9d8}
-.top{max-width:1180px;margin:0 auto;padding:18px 24px 0;display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 26px}
-.top a{text-decoration:none}
-.top .name{font-size:21px;margin-right:auto}
-.top nav{display:flex;flex-wrap:wrap;gap:4px 22px;font-size:16px}
-.top nav a{color:var(--soft);border-bottom:1px solid transparent}
-.top nav a:hover{color:var(--green);border-bottom-color:var(--green)}
-main{max-width:1180px;margin:0 auto;padding:22px 24px 10px}
-.hero{display:grid;grid-template-columns:minmax(0,460px) 1fr;gap:36px;align-items:start}
-.hero img{width:100%;height:auto;display:block;border-radius:2px}
-.bio p{margin:0 0 22px;color:var(--soft)}
-.links{list-style:none;margin:0;padding:0 0 0 20px}
-.links li{margin:4px 0}
-.links .cv{font-weight:700;font-style:italic}
-hr{border:0;border-top:1px solid var(--line);margin:40px 0 34px}
-h1{font-weight:300;color:var(--green);font-size:38px;margin:0 0 6px;line-height:1.2}
-h2{font-weight:400;color:var(--green);font-size:23px;margin:34px 0 12px;line-height:1.3}
-h2 small{font-size:15px;font-weight:400}
-.interests{font-size:17px}
-.interests small{font-size:12px}
-.paper{margin:0 0 22px}
-.paper .t{font-size:19px}
-.paper .with{font-size:16px}
-.paper .j{font-weight:700;margin-top:2px}
-.paper{margin-bottom:18px}
-details.abs{margin-top:3px;font-size:15.5px;color:var(--soft)}
-details.abs summary{cursor:pointer;list-style:none;display:inline-block;font-size:14px;color:var(--green);letter-spacing:.02em}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+body{margin:0;background:var(--bg);color:var(--ink);font:300 17px/1.65 Lato,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--acc);text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{color:#0f2440}
+::selection{background:var(--acc-soft)}
+.wrap{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:270px minmax(0,1fr);gap:60px;padding:52px 28px 40px}
+/* sidebar */
+.side{align-self:start}
+@media (min-height:780px) and (min-width:861px){.side{position:sticky;top:36px}}
+.side .photo{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;border-radius:4px}
+.side .name{font:500 31px/1.12 "EB Garamond",Georgia,serif;margin:20px 0 6px;color:var(--ink)}
+.side .role{margin:0 0 18px;color:var(--soft);font-size:15.5px;line-height:1.5}
+.side .links{list-style:none;padding:0;margin:0 0 22px;font-size:15.5px}
+.side .links li{margin:5px 0}
+.side .links .cv a{font-weight:700}
+.toc{border-top:1px solid var(--line);padding-top:14px;display:flex;flex-direction:column;gap:5px;font-size:15px}
+.toc a{color:var(--soft);text-decoration:none;padding-left:10px;border-left:2px solid transparent}
+.toc a:hover{color:var(--acc)}
+.toc a.on{color:var(--acc);border-left-color:var(--acc);font-weight:400}
+/* content */
+main section{margin-bottom:52px}
+main h2{font:500 30px/1.2 "EB Garamond",Georgia,serif;color:var(--acc);margin:0 0 16px;padding-bottom:7px;border-bottom:1px solid var(--line)}
+main h3{font:400 15px/1.3 Lato,Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--soft);margin:26px 0 10px}
+.lead{font-size:18px;color:#3e4c59;margin:0 0 16px}
+.interests{margin:0 0 12px}
+.interests small{font-size:12.5px;color:var(--soft)}
+.interests b{font-weight:700}
+.paper{margin:0 0 20px}
+.paper .t{font-size:18px;color:var(--ink);text-decoration-color:#b9c4d0}
+.paper .t:hover{color:var(--acc)}
+.paper .with{color:var(--soft);font-size:15.5px}
+.paper .j{font-style:italic;color:var(--acc);font-size:16px;margin-top:1px}
+details.abs{margin-top:2px;color:var(--soft);font-size:15.5px}
+details.abs summary{cursor:pointer;list-style:none;display:inline-block;font-size:14px;color:var(--acc);letter-spacing:.02em}
 details.abs summary::-webkit-details-marker{display:none}
 details.abs summary::before{content:"\25B8\00a0"}
 details.abs[open] summary::before{content:"\25BE\00a0"}
-details.abs summary:hover{text-decoration:underline;text-underline-offset:3px}
-details.abs p{margin:4px 0 6px;max-width:980px}
-.res{list-style:none;padding:0;margin:8px 0 0}
-.res li{margin:0 0 16px}
-.res a{font-size:19px}
-.res span{display:block;font-size:15.5px;color:var(--soft);max-width:980px}
-.res .c{display:block;font-size:19px;color:var(--ink)}
-.more{font-style:italic;font-size:15.5px;margin:26px 0 0}
-.seminar{font-size:19px}
-footer{max-width:1180px;margin:0 auto;padding:0 24px 34px}
-.social{display:flex;justify-content:center;gap:12px 72px;flex-wrap:wrap;font-style:italic;color:var(--green);margin-bottom:22px}
-.social a{text-decoration:none;color:var(--green)}
-.social a:hover{text-decoration:underline}
-.fine{text-align:center;font-size:13px;color:#888}
-@media (max-width:760px){
-  .hero{grid-template-columns:1fr;gap:22px}
-  .links{padding-left:0}
-  h1{font-size:32px}
-  .top,main,footer{padding-left:16px;padding-right:16px}
+details.abs summary:hover{text-decoration:underline}
+details.abs p{margin:4px 0 8px}
+.more{font-style:italic;font-size:15.5px;color:var(--soft);margin:22px 0 0}
+.res{list-style:none;padding:0;margin:4px 0 0}
+.res li{margin:0 0 20px}
+.res .c{display:block;font-size:18px;color:var(--ink);font-weight:400}
+.res .c small{font-size:15px;color:var(--soft);font-weight:300}
+.res .meta{display:block;font-size:13.5px;letter-spacing:.02em;color:var(--acc);margin:1px 0 3px}
+.res span{display:block;color:var(--soft);font-size:15.5px}
+.res a{font-size:18px}
+footer{border-top:1px solid var(--line);padding-top:20px;margin-top:10px}
+.social{display:flex;flex-wrap:wrap;gap:8px 28px;font-size:15.5px;margin-bottom:12px}
+.fine{font-size:13px;color:#8a96a3;margin:0}
+@media (max-width:860px){
+  .wrap{grid-template-columns:1fr;gap:26px;padding:24px 18px 30px}
+  .side{position:static;display:grid;grid-template-columns:112px 1fr;gap:4px 18px;align-items:start}
+  .side > a:first-child{grid-row:1/3}
+  .side .photo{width:112px;height:112px}
+  .side .name{margin:2px 0 2px;font-size:28px}
+  .side .role{margin:0;font-size:15px}
+  .side .links{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:4px 16px;margin:12px 0 0}
+  .side .links li{margin:0}
+  .toc{grid-column:1/-1;flex-direction:row;flex-wrap:wrap;gap:4px 14px;margin-top:12px;padding-top:10px}
+  .toc a{padding-left:0;border-left:0}
+  main h2{font-size:27px}
 }
 </style>
 </head>
 <body>
-<header class="top"><a class="name" href="/">Gerrit Köchling</a><nav aria-label="Sections"><a href="#research">Research</a><a href="#publications">Publications</a><a href="#teaching">Teaching</a><a href="#resources">Resources</a><a href="/cv.pdf">CV</a></nav></header>
-<main>
-<section class="hero">
-  <img src="/img/gerrit_koechling.jpg" alt="Gerrit Köchling presenting a research paper" width="1200" height="900">
-  <div class="bio">
-    <p>I am an Assistant Professor of Finance at Ilmenau University of Technology working in the fields of corporate finance with a focus on financial markets and ESG. I am also interested in their intersections with behavioral finance and company disclosures. My background is in mathematics and economics. I am a co-organizer of the Joint Finance Seminar, an online research seminar series with leading international scholars (<a href="https://www.jointfinanceseminar.com/">www.jointfinanceseminar.com/</a>). Besides my passion for unstructured data, especially text, I easily get enthusiastic about any kind of sport and enjoy long walks with my friends and family.</p>
-    <ul class="links">
+<div class="wrap">
+<aside class="side">
+  <a href="/" aria-label="Home"><img class="photo" src="/img/gerrit_koechling_square.jpg" alt="Gerrit Köchling presenting a research paper" width="640" height="640"></a>
+  <h1 class="name">Gerrit Köchling</h1>
+  <p class="role">Assistant Professor of Finance<br>Ilmenau University of Technology</p>
+  <ul class="links">
       <li><a href="https://www.tu-ilmenau.de/en/university/departments/department-of-economic-sciences-and-media/profile/institutes-and-groups/finance-group">University website</a></li>
       <li><a href="https://scholar.google.de/citations?user=a5JoTuUAAAAJ&amp;hl=de&amp;oi=ao">Google Scholar</a></li>
       <li><a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=2900815">SSRN</a></li>
@@ -90,22 +98,21 @@ footer{max-width:1180px;margin:0 auto;padding:0 24px 34px}
       <li><a href="mailto:gerrit.koechling@tu-ilmenau.de">gerrit.koechling@tu-ilmenau.de</a></li>
       <li class="cv"><a href="/cv.pdf">Curriculum Vitae</a></li>
     </ul>
-  </div>
+  <nav class="toc" aria-label="Sections">
+    <a href="#about">About</a><a href="#working-papers">Working papers</a><a href="#publications">Publications</a><a href="#teaching">Teaching</a><a href="#resources">Resources</a>
+  </nav>
+</aside>
+<main>
+<section id="about">
+  <h2>About</h2>
+  <p class="lead">I am an Assistant Professor of Finance at Ilmenau University of Technology working in the fields of corporate finance with a focus on financial markets and ESG. I am also interested in their intersections with behavioral finance and company disclosures. My background is in mathematics and economics. I am a co-organizer of the Joint Finance Seminar, an online research seminar series with leading international scholars (<a href="https://www.jointfinanceseminar.com/">www.jointfinanceseminar.com/</a>). Besides my passion for unstructured data, especially text, I easily get enthusiastic about any kind of sport and enjoy long walks with my friends and family.</p>
+  <p class="interests"><b>Research interests:</b> Corporate Finance <small>(IPO, M&amp;A, Payout Policy)</small>, ES <small>(CO2, Culture, Misconduct)</small>, G <small>(CEOs, Directors, Investors, Analysts, Media)</small>, Information <small>(Distraction, Acquisition)</small>, Textual Analysis <small>(Disclosure, Social Media)</small></p>
+  <p>I co-organize an online research seminar with leading finance and accounting scholars from around the world. Here is the <a href="https://www.jointfinanceseminar.com/">seminar website</a>.</p>
 </section>
 
-<hr>
-
-<h1 id="research">Research</h1>
-
-<h2>Interests</h2>
-<p class="interests">Corporate Finance <small>(IPO, M&amp;A, Payout Policy)</small>, ES <small>(CO2, Culture, Misconduct)</small>, G <small>(CEOs, Directors, Investors, Analysts, Media)</small>, Information <small>(Distraction, Acquisition)</small>, Textual Analysis <small>(Disclosure, Social Media)</small></p>
-
-<h2>Online Research Seminar in Finance and Accounting</h2>
-<p class="seminar">I co-organize an online research seminar with leading finance and accounting scholars from around the world. Here is the <a href="https://www.jointfinanceseminar.com/">seminar website</a>.</p>
-
-<h2 id="working-papers">Working Papers <small>(selected)</small></h2>
-
-<div class="paper">
+<section id="working-papers">
+  <h2>Working Papers <small style="font-size:16px;color:var(--soft)">(selected)</small></h2>
+  <div class="paper">
   <div><a class="t" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4643278">Traditional Investment Research and Social Connectedness</a> <span class="with">(with Travis Dyer and Peter Limbach)</span></div>
   <details class="abs"><summary>Abstract</summary><p>We show that investors acquire more public information about firms to which they are more socially proximate. A standard deviation increase in the Social Connectedness Index (Bailey, Cao, Kuchler, Stroebel, and Wong, 2018) between a firm’s headquarter county and a searcher county is associated with 30% more EDGAR filing downloads from the searcher county. The effect of social proximity on traditional investment research is distinct from the effects of geographic proximity and capital allocation. We find similar results studying headquarter relocations, investor-level data, power outages, and EDGAR downloads from European regions, for which physical distance should be irrelevant. Social proximity matters more during times of high market-wide uncertainty and for firms with weaker information environments. Traditional information gathered by socially proximate investors predicts short-term earnings and stock returns. Collectively, the evidence indicates that social ties mitigate informational frictions and foster valuable traditional information acquisition in financial markets.</p></details>
 </div>
@@ -114,12 +121,12 @@ footer{max-width:1180px;margin:0 auto;padding:0 24px 34px}
   <div><a class="t" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5917222">Emissions Restatements after the SEC’s Request for Public Input on Climate-Related Disclosures: Evidence from Carbon Disclosure Project Filings</a> <span class="with">(with Daniel Aobdia, Peter Limbach, and Aaron Yoon)</span></div>
   <details class="abs"><summary>Abstract</summary><p>This paper analyzes firms’ restatements of their Scope 1 emission numbers after the Securities and Exchange Commission’s request for public input on climate-related disclosure in March 2021. Using data from the Carbon Disclosure Project, we find a marked increase in the frequency and magnitude of restatements by U.S. public firms, both relative to their previous restatement levels and to those of private firms not subject to SEC oversight. Firms with independently assured emission data, board-level oversight of climate issues, high transition risk, and high institutional ownership restate less upwards but not downwards. Firms with upward revisions in response to the SEC’s initiative increase investments in emission-reduction projects. The results are consistent with widespread weaknesses in firms’ carbon reporting infrastructures and strategic motives to underreport. They have important implications for regulators, investors, and standard setters by highlighting the need for robust carbon reporting, and the critical role of assurance of sustainability disclosures.</p></details>
 </div>
+  <p class="more">Find further working papers in my <a href="/cv.pdf">CV</a>.</p>
+</section>
 
-<p class="more">Find further working papers in my <a href="/cv.pdf">CV</a>.</p>
-
-<h2 id="publications">Publications <small>(selected)</small></h2>
-
-<div class="paper">
+<section id="publications">
+  <h2>Publications <small style="font-size:16px;color:var(--soft)">(selected)</small></h2>
+  <div class="paper">
   <div><a class="t" href="https://www.cambridge.org/core/journals/journal-of-financial-and-quantitative-analysis/article/does-speculative-news-hurt-productivity-evidence-from-takeover-rumors/306BB2F47D9F18D31254D6B87166C26B">Does Speculative News Hurt Productivity? Evidence from Takeover Rumors</a> <span class="with">(with Christian Andres, Dmitry Bazhutov, Douglas Cumming, and Peter Limbach)</span></div>
   <div class="j">Journal of Financial and Quantitative Analysis (2025)</div>
   <details class="abs"><summary>Abstract</summary><p>We show that productivity at both the firm and employee (i.e., analyst and inventor) level temporarily declines upon announcements of takeover rumors that do not materialize. Such speculative news may hurt productivity because uncertainty and threat of job loss cause anxiety, distraction, and reduced commitment among employees and managers. Consistently, we observe a more pronounced productivity dip for rumored targets and when the likelihood of job loss is higher. Firm performance mirrors these results. We find no indication of reverse causality. The evidence fosters our understanding of potential real effects of speculative financial news and the costs of takeover threats.</p></details>
@@ -142,31 +149,35 @@ footer{max-width:1180px;margin:0 auto;padding:0 24px 34px}
   <div class="j">British Journal of Management (2024)</div>
   <details class="abs"><summary>Abstract</summary><p>We investigate the relationship between operational leanness and institutional ownership. Based on a sample of 12,291 firm-year observations of US manufacturing firms from 1998 to 2020, we find leaner firms to attract significantly more institutional investors – both in terms of the fraction of shares held and the number of institutional investors holding shares of the firm. This finding holds in several tests addressing endogeneity concerns. Contrary to studies investigating the relationship between operational leanness and operating performance or credit ratings, our results do not provide consistent evidence that this relationship is also of a concave shape. However, we provide evidence that the relationship is stronger (i) for firms with weak corporate governance and high firm-specific monitoring costs and (ii) for active institutions, suggesting that not only firm performance considerations but also perceived lower agency costs are important mechanisms explaining why institutional investors prefer lean manufacturing firms. Taken together, these findings contribute to our understanding of institutional investors’ preferences in general and across institution types.</p></details>
 </div>
+  <p class="more">Find further publications in my <a href="/cv.pdf">CV</a>.</p>
+</section>
 
-<p class="more">Find further publications in my <a href="/cv.pdf">CV</a>.</p>
-
-<hr>
-
-<h1 id="teaching">Teaching</h1>
-<h2>Current courses <small>(Ilmenau University of Technology)</small></h2>
-<ul class="res">
-  <li><span class="c">Decentralized Finance</span><span>Master · English · lecture and exercise · winter term</span></li>
-  <li><span class="c">Corporate Finance</span><span>Master · English · lecture and exercise · summer term</span></li>
-  <li><span class="c">Graduate Research Seminar</span><span>Master · English · seminar</span></li>
+<section id="teaching">
+  <h2>Teaching</h2>
+  <h3>Courses at Ilmenau University of Technology</h3>
+  <ul class="res teach">
+  <li><span class="c">Corporate Finance</span><span class="meta">Master · English · summer term · lecture and exercise</span>
+    <span>Risk and return, cash flows, the cost of capital, company valuation, and payout policy, based on Berk and DeMarzo. Exercises in Excel and Python, and case studies such as the SpaceX IPO and a company valuation project.</span></li>
+  <li><span class="c">Decentralized Finance</span><span class="meta">Master · English · winter term · lecture and exercise</span>
+    <span>How blockchains, Bitcoin, and Ethereum smart contracts work, and what decentralized finance builds on them: lending protocols, decentralized exchanges such as Uniswap, tokenized real-world assets, and their risks and regulation. With Python notebooks and project sprints.</span></li>
+  <li><span class="c">AI in Finance</span><span class="meta">Master · English · summer term · new from 2027</span>
+    <span>Using AI and machine learning for empirical finance research: from finding research questions and literature, collecting and processing data, causal inference and validity, to machine learning in asset pricing and AI agents in research workflows. Assessed by an empirical team project.</span></li>
+  <li><span class="c">Investment Strategies <small>(Kapitalanlagestrategien)</small></span><span class="meta">Bachelor · German · winter term · new from 2027/28</span>
+    <span>Return and risk, portfolio theory, capital market models, and market efficiency; passive, active, and factor investing; asset allocation, performance measurement, sustainable investing, and backtesting. Assessed by a team project on an investment strategy.</span></li>
+  <li><span class="c">Graduate Research Seminar</span><span class="meta">Master · English · seminar</span></li>
 </ul>
-<p class="more">Earlier at TU Dortmund (2017–2024): Financial Modeling, Financial Econometrics, Investment &amp; Finance, Research Topics in Finance, and seminars. Full list in my <a href="/cv.pdf">CV</a>.</p>
+  <p class="more">Earlier at TU Dortmund (2017–2024): Financial Modeling, Financial Econometrics, Investment &amp; Finance, Research Topics in Finance, and seminars. Full list in my <a href="/cv.pdf">CV</a>.</p>
+</section>
 
-<hr>
-
-<h1 id="resources">Resources</h1>
-<ul class="res">
+<section id="resources">
+  <h2>Resources</h2>
+  <ul class="res">
   <li><a href="https://www.jointfinanceseminar.com/free-datasets/">Free data sources for finance and accounting research</a><span>A searchable list of freely available datasets, sorted by topic: asset pricing, corporate finance and governance, banking and households, innovation, regulation and politics, ESG and climate, culture and news, and macro data. Every link checked; maintained with the Joint Finance Seminar.</span></li>
   <li><a href="https://www.jointfinanceseminar.com/past-seminars/">Joint Finance Seminar: past talks</a><span>All talks of our online research seminar since 2020, with the journals where the papers were published.</span></li>
 </ul>
-</main>
+</section>
 
 <footer>
-  <hr>
   <nav class="social" aria-label="Profiles">
     <a href="https://www.linkedin.com/in/gerrit-koechling/">LinkedIn</a>
     <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=2900815">SSRN</a>
@@ -175,5 +186,13 @@ footer{max-width:1180px;margin:0 auto;padding:0 24px 34px}
   </nav>
   <p class="fine">This website is hosted on GitHub Pages; GitHub logs visitors’ IP addresses for security purposes. No cookies, no analytics.</p>
 </footer>
+</main>
+</div>
+<script>
+// highlight the current section in the side menu
+const links=[...document.querySelectorAll('.toc a')];
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id));}});},{rootMargin:'-30% 0px -60% 0px'});
+document.querySelectorAll('main section').forEach(s=>io.observe(s));
+</script>
 </body>
 </html>
